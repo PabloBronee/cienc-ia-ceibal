@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Espacio de trabajo · Cienc-IA Telescopio</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="mock-banner">Maqueta conceptual: la conversación es un ejemplo pre-armado y nada se guarda ni se envía. No es un sitio oficial de Ceibal.</div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="img/logo.svg" alt="">
+      <span class="name">Cienc-IA<small>TELESCOPIO</small></span>
+    </a>
+    <form class="search" role="search">
+      <input type="text" placeholder="¿Qué estás buscando?" aria-label="Buscar">
+      <button type="submit" aria-label="Buscar">&#9906;</button>
+    </form>
+    <a class="btn-login" href="#" data-fake="Maqueta: el ingreso no está conectado.">Ingresar</a>
+  </header>
+
+  <nav class="nav" aria-label="Principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a class="active" href="espacio.html">Espacio de trabajo</a></li>
+      <li><a href="index.html#versiones">Versiones</a></li>
+      <li><a href="resultados.html">Resultados</a></li>
+      <li><a href="index.html#como">Ayuda</a></li>
+    </ul>
+  </nav>
+
+  <div class="crumbs">
+    <a href="index.html">Inicio</a><span class="sep">&rsaquo;</span>
+    <a href="index.html">Cienc-IA Telescopio</a><span class="sep">&rsaquo;</span>
+    Espacio de trabajo
+  </div>
+
+  <main class="workspace">
+    <div class="ws-grid">
+
+      <!-- Panel izquierdo: la investigación -->
+      <section class="panel" aria-label="Mi investigación">
+        <div class="panel-head">
+          <div>
+            <h2>Mi investigación</h2>
+            <div class="sub">Documento propio · se guarda automáticamente</div>
+          </div>
+          <div class="people">
+            <div class="avatars" aria-label="Participantes">
+              <span class="avatar a1" title="Vos">VOS</span>
+              <span class="avatar a2" title="Compañera">MR</span>
+              <span class="avatar a3" title="Compañero">LS</span>
+            </div>
+            <button class="btn-small" id="invite-open" type="button">Invitar compañeros</button>
+          </div>
+        </div>
+
+        <div class="stepper" aria-label="Pasos del método científico">
+          <div class="s active"><span class="dot">1</span>Fenómeno</div>
+          <div class="s"><span class="dot">2</span>Tipo</div>
+          <div class="s"><span class="dot">3</span>Pregunta</div>
+          <div class="s"><span class="dot">4</span>Hipótesis</div>
+          <div class="s"><span class="dot">5</span>Experimentación</div>
+          <div class="s"><span class="dot">6</span>Análisis</div>
+          <div class="s"><span class="dot">7</span>Conclusión</div>
+        </div>
+
+        <div class="doc">
+          <p class="doc-title">(Documento propio) Mi investigación</p>
+          <p class="doc-meta">Podés volver a pasos anteriores cuando quieras: investigar no es un proceso lineal.</p>
+          <h3>Paso 1 · Fenómeno de investigación</h3>
+          <div class="editable" contenteditable="true" spellcheck="false" data-placeholder="Escribí acá el fenómeno que te gustaría investigar…"></div>
+          <p class="hint">Esta es una maqueta: lo que escribas queda solo en tu navegador y se pierde al recargar.</p>
+        </div>
+      </section>
+
+      <!-- Panel derecho: el asistente -->
+      <section class="panel chat" aria-label="Asistente">
+        <div class="panel-head">
+          <div>
+            <h2>Asistente Cienc-IA</h2>
+            <div class="sub">Revisa tu documento y te orienta</div>
+          </div>
+        </div>
+
+        <div class="chat-body">
+          <div class="msg bot">
+            <div class="who"><img src="img/logo.svg" alt="">Cienc-IA Telescopio</div>
+            <p>¡Hola! Soy <strong>Cienc-IA Telescopio</strong>, un asistente que te acompaña a aplicar el método científico en tu investigación.</p>
+            <p>No te voy a dar las respuestas hechas: te voy a orientar, señalar qué le falta a cada paso y ayudarte a pensar. ¿Cómo querés empezar?</p>
+            <div class="chips">
+              <span class="chip chosen">Quiero empezar a investigar</span>
+              <span class="chip off">Primero quiero entender qué es el método científico y por qué investigamos</span>
+            </div>
+          </div>
+
+          <div class="msg user">Quiero empezar directamente.</div>
+
+          <div class="msg bot">
+            <div class="who"><img src="img/logo.svg" alt="">Cienc-IA Telescopio</div>
+            <p>Perfecto, vamos con el <strong>Paso 1: determinar el fenómeno de investigación</strong>.</p>
+            <p>El fenómeno es eso que observás y te genera curiosidad o preocupación, todavía sin forma de pregunta. No hace falta que esté perfecto: lo vamos afinando juntos.</p>
+            <p>Para empezar, agregá a tu documento (panel de la izquierda) el apartado <strong>«Paso 1 · Fenómeno de investigación»</strong>. Después contame con tus palabras: <strong>¿qué situación, hecho o problema del ámbito educativo te gustaría entender mejor?</strong></p>
+          </div>
+
+          <div class="pending-note">Aquí continuaría el proceso del Paso 1, con la misma lógica del asistente usable.</div>
+        </div>
+
+        <form class="chat-input" id="chat-form">
+          <input id="chat-text" type="text" placeholder="Escribile al asistente…" aria-label="Mensaje">
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="modal-bg" id="invite-modal">
+    <div class="modal" role="dialog" aria-labelledby="invite-title">
+      <h3 id="invite-title">Invitar compañeros</h3>
+      <p>Compartí tu documento para investigar en equipo. Pueden ver y editar el mismo trabajo.</p>
+      <input type="email" placeholder="correo@ejemplo.com" aria-label="Correo electrónico">
+      <div class="row">
+        <button class="btn-small" type="button" data-close>Cancelar</button>
+        <button class="btn btn-solid" type="button" id="invite-send" style="padding:9px 20px;font-size:.9rem">Enviar invitación</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div><strong>Cienc-IA Telescopio</strong><br>Club de Ciencia Andamio · IFD Carmelo · 2026</div>
+      <div>Maqueta conceptual. No es un sitio oficial de Ceibal.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
